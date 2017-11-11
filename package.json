@@ -1,0 +1,14 @@
+{
+  "name": "cassandra",
+  "version": "1.0.0",
+  "description": "Test cassandra stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ken",
+  "license": "MIT",
+  "dependencies": {
+    "cassandra-driver": "^3.3.0"
+  }
+}
