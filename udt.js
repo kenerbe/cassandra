@@ -1,8 +1,7 @@
 "use strict";
 const cassandra = require('cassandra-driver');
-const async = require('async');
 
-const client = new cassandra.Client({ contactPoints: ['192.168.1.7']});
+const client = new cassandra.Client({ contactPoints: ['127.0.0.1']});
 
 /**
  * Creates a table with a user-defined type, inserts a row and selects a row.
@@ -45,11 +44,11 @@ client.connect()
       phones: ['414-665-0000']
     };
     const query = 'INSERT INTO examples.udt_tbl1 (name, address) VALUES (?, ?)';
-    return client.execute(query, ['IPS Engineering', address], { prepare: true});
+    return client.execute(query, ['MKE Engineering', address], { prepare: true});
   })
   .then(function () {
     var query = 'SELECT name, address FROM examples.udt_tbl1 WHERE name = ?';
-    return client.execute(query, ['IPS Engineering'], { prepare: true });
+    return client.execute(query, ['MKE Engineering'], { prepare: true });
   })
   .then(function (result) {
     const row = result.first();
