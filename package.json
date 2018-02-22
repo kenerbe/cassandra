@@ -9,6 +9,8 @@
   "author": "Ken",
   "license": "MIT",
   "dependencies": {
+    "assert": "^1.4.1",
+    "async": "^2.6.0",
     "cassandra-driver": "^3.3.0"
   }
 }

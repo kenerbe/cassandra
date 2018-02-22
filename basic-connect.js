@@ -1,7 +1,7 @@
 "use strict";
 const cassandra = require('cassandra-driver');
 
-const client = new cassandra.Client({ contactPoints: ['127.0.0.1']});
+const client = new cassandra.Client({ contactPoints: ['192.168.1.7']});
 client.connect()
   .then(function () {
     console.log('Connected to cluster with %d host(s): %j', client.hosts.length, client.hosts.keys());

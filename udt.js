@@ -2,7 +2,7 @@
 const cassandra = require('cassandra-driver');
 const async = require('async');
 
-const client = new cassandra.Client({ contactPoints: ['127.0.0.1']});
+const client = new cassandra.Client({ contactPoints: ['192.168.1.7']});
 
 /**
  * Creates a table with a user-defined type, inserts a row and selects a row.
